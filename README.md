@@ -107,4 +107,12 @@ Homework for the DB &amp; SQL lecture in Binary Studio Academy
         TIMESTAMP created_at
         TIMESTAMP updated_at
     }
+    User ||--o{ FavoriteMovies : favorites
+    Movie ||--o{ FavoriteMovies : is_favorite
+    FavoriteMovies {
+        INT user_id PK, FK
+        INT movie_id PK, FK
+        TIMESTAMP created_at
+        TIMESTAMP updated_at
+    }
 ```
